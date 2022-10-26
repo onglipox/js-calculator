@@ -1,5 +1,86 @@
-<main class="main-container">
-  <h1>Simple JS Calculator</h1>
+<!doctype html>
+<html class="dark h-full">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/dist/output.css" rel="stylesheet">
+	</head>
+	<body class="dark:bg-gray-800 h-full">
+		<div class="container mx-auto py-5 h-full">
+			<div class="h-2/6 relative dark:text-white">
+				<p class="text-8xl font-extralight absolute bottom-0 right-0" id="output">0</p>
+			</div>
+			<div class="h-4/6 py-5">
+				<div class="flex flex-row py-2">
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(0);">AC</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full">+/-</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full">%</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-orange-400 w-20 h-20 text-4xl p-4 rounded-full" id="/" onclick="calculate('/');">&#247;</button>
+					</div>
+				</div>
+				<div class="flex flex-row py-2">
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(7);">7</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(8);">8</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(9);">9</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-orange-400 w-20 h-20 text-3xl p-4 rounded-full" id="X" onclick="calculate('X');">X</button>
+					</div>
+				</div>
+				<div class="flex flex-row py-2">
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(4);">4</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(5);">5</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(6);">6</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-orange-400 w-20 h-20 text-4xl p-4 rounded-full" id="-" onclick="calculate('-');">-</button>
+					</div>
+				</div>
+				<div class="flex flex-row py-2">
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(1);">1</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(2);">2</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full" onclick="calculate(3);">3</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-orange-400 w-20 h-20 text-3xl p-4 rounded-full" id="+" onclick="calculate('+');">+</button>
+					</div>
+				</div>
+				<div class="flex flex-row py-2">
+					<div class="basis-2/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-40 h-20 text-3xl p-4 rounded-full text-left" onclick="calculate(0);">0</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-gray-400 w-20 h-20 text-3xl p-4 rounded-full">.</button>
+					</div>
+					<div class="basis-1/4 text-center">
+						<button type="button" class="dark:bg-orange-400 w-20 h-20 text-3xl p-4 rounded-full">=</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div class="cal-container"></div>
-</main>
+		<script type="text/javascript" src="./index.js"></script>
+	</body>
+</html>
